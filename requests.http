@@ -1,0 +1,30 @@
+### Crear un libro
+POST http://localhost:8000/libros
+Content-Type: application/json
+
+{
+    "titulo": "Cien años de soledad",
+    "autor": "Gabriel García Márquez",
+    "isbn": "9788437604947",
+    "categoria": "Realismo mágico"
+}
+
+### Listar todos los libros
+GET http://localhost:8000/libros
+
+### Buscar libros por título
+GET http://localhost:8000/libros/buscar?titulo=soledad
+
+### Actualizar un libro (reemplaza {id} con un ID real)
+PUT http://localhost:8000/libros/{id}
+Content-Type: application/json
+
+{
+    "titulo": "Cien años de soledad (Edición Especial)",
+    "autor": "Gabriel García Márquez",
+    "isbn": "9788437604947",
+    "categoria": "Clásicos"
+}
+
+### Eliminar un libro
+DELETE http://localhost:8000/libros/{id}
