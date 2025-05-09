@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from datetime import datetime
 class LibroCreate(BaseModel):
     titulo: str
     autor: str
@@ -9,4 +9,6 @@ class LibroCreate(BaseModel):
 
 class LibroResponse(LibroCreate):
     id: int
-    fecha_creacion: str  # Se convertirá automáticamente desde datetime
+    fecha_creacion: datetime  # Se convertirá automáticamente desde datetime
+    
+
