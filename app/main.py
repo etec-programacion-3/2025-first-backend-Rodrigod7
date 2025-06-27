@@ -5,7 +5,17 @@ from app.database import init_db
 from fastapi import Query
 from fastapi import Query, HTTPException
 from tortoise.expressions import Q
+
 app = FastAPI(title="API Biblioteca", version="1.0")
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # En producción: usar solo tu dominio
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Inicializar la base de datos al iniciar la app
 @app.on_event("startup")

@@ -16,7 +16,7 @@ GET http://localhost:8000/libros
 GET http://localhost:8000/libros/buscar?titulo=soledad
 
 ### Actualizar un libro (reemplaza {id} con un ID real)
-PUT http://localhost:8000/libros/5
+PUT http://localhost:8000/libros/7
 Content-Type: application/json
 
 {
@@ -27,4 +27,4 @@ Content-Type: application/json
 }
 
 ### Eliminar un libro
-DELETE http://localhost:8000/libros/6
+DELETE http://localhost:8000/libros/7
